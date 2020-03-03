@@ -1,92 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
-<head>
- <meta charset="UTF-8" />
- <meta name="viewport" content="width=device-width, initial-scale=1.0" />
- <title>Document</title>
- 
-</head>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./styles.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./weather.js"></script>
 
-<body>
- <h2>Quick Results by weather parameters Orientation</h2>
+    <title>Weather App</title>
+  </head>
 
+  <body>
+    <h1>Weather App</h1>
+    <input type="text" id="cityName" placeholder="what is your city?" />
+    <button id="button">Get my Forecast</button>
+<br><br><br><br>
+    <div class="container">
+      <div class="row weather">
+        <div class="col"><ul class="abc" id="today"></ul></div>
+        <div class="col"><ul class="abc" id="next1"></ul></div>
+        <div class="col"><ul class="abc" id="next2"></ul></div>
+        <div class="col"><ul class="abc" id="next3"></ul></div>
+        <div class="col"><ul class="abc" id="next4"></ul></div>
+      </div>
 
- <br />
- <h4>Weather Values for a specific Region[City]</h4>
-  <p>
-   Welcome to my Weather App.</p>
-
-
-  <div class="container">
-   <div class="row">
-
-    <div class="col-3">
-   
-     <img
-      src="https://d279m997dpfwgl.cloudfront.net/wp/2017/12/weather_album-art-1000x1000.jpg"
-      alt="" width="200px" style="display: inline-block;""><div></div>
-        <input type="text" placeholder="What city forecast do you want?" id="cityName"></input>
-        <button id="go" style="display: inline-block;">Go!</button>
-    </div>
-
-
-   <p id="result"></p>
-
-       </div>
-  </div>
-  </div>
-
-
-  <p></p><img src=""></img></p>
-
-
-  <p id="results"></p>
-  <div id="list">
-
-  </div>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-  <script>
-var cityName = $("#cityName").val();
-var apiKey = "0c7ba18169b66501457ebb15183b7c1d";
-
-
-
-
-
-
-   $(document).ready(function () {
-  
-     $("#go").on("click", function () {
     
-    alert(cityName)
-      
-      
-     $.ajax({
-       url:
-       "https://api.openweathermap.org/data/2.5/weather?q="+cityName+"&appid="+apiKey,
-        
-       method: "GET"
-      }).then(function (response) {
-       console.log(response);
-       /*$("#results").text(response.hits[0].recipe.url);
-       $("img").attr("src", response.hits[1].recipe.image);
-       console.log(response.hits[0].recipe.label);
-       console.log(response.hits[0].recipe.ingredients);
-       console.log(response.hits[0].recipe.dietLabels);
-       console.log(response.hits[0].recipe.url);
-       console.log(response.hits[0]);
-       console.log(response.hits);*/
-       
-      
-     
-     });
-    });
-   }); 
-   
-      </script>
-</body>
 
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.1.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

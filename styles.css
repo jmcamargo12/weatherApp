@@ -1,0 +1,22 @@
+body {
+  background-image: url(https://i.ytimg.com/vi/ocBgVW6vY_I/maxresdefault.jpg);
+}
+
+.col {
+  padding: 4px;
+  border: 1px black solid;
+  height: 200px;
+}
+
+.weather {
+  border-radius: 12%;
+  background-color: blueviolet;
+  border: 1px solid black;
+}
+
+.abc {
+  padding: 4px;
+  margin: 0 auto;
+  list-style: none;
+  text-align: center;
+}
